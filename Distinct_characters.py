@@ -1,12 +1,9 @@
 n=input()
-s=[]
+a=[]
 n=n.lower()
 for i in n:
-    if n.count(i)==1 and i.isalpha():
-        s.append(i)
-s.sort()
-a=""
-for i in s:
-    a+=i
-print(a)
-    
+    if i not in a and i.isalpha():
+        a.append(i)
+a.sort()
+n="".join(a)
+print(n)
